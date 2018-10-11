@@ -63,3 +63,5 @@ media
 # PROJECT #
 btre_resources
 venv
+/static
+/media
