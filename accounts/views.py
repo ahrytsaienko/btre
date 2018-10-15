@@ -56,7 +56,10 @@ def login(req):
 
 
 def logout(req):
-    return redirect('index')
+    if req.method == 'POST':
+        auth.logout(req)
+        messages.success(req, 'Your are now logged out')
+        return redirect('index')
 
 
 def dashboard(req):
